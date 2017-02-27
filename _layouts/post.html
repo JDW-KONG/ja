@@ -1,0 +1,55 @@
+--- 
+layout: default 
+comments: true 
+---
+
+<div class="row">
+  <div class="col l8 offset-l2 m12">
+    <div class="title">
+      <h3>{{page.title}}</h3>
+      <span class="post-info">Posted by <a href="#">Justice</a> - 2 hours ago</span>
+      <hr>
+    </div>
+
+
+    <article>
+
+      <div class="card">
+        <div class="card-image">
+          <a href="#" class="scale">
+            <div class="img img-scale">
+              <img src="{{ site.baseurl }}/{{page.img}}" alt="{{page.img_alt}}">
+            </div>
+          </a>
+          <span class="tag card-title">video</span>
+        </div>
+        <div class="card-content">
+          {{ content }}
+        </div>
+      </div>
+    </article>
+    {% if page.comments %}
+      <div id="disqus_thread"></div>
+      <script>
+        /**      
+        *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.      
+        *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/      
+
+        var disqus_config = function () {      
+        this.page.url = {{ page.url }};  // Replace PAGE_URL with your page's canonical URL variable      
+        this.page.identifier = {{ page.id }}; // Replace PAGE_IDENTIFIER with your page's unique identifier variable      
+        };      
+
+        (function() { // DON'T EDIT BELOW THIS LINE        
+        var d = document, s = d.createElement('script');        
+        s.src = '//rljusticio-github-io-fgc-jekyll.disqus.com/embed.js';        
+        s.setAttribute('data-timestamp', +new Date());        
+        (d.head || d.body).appendChild(s);      
+        })();
+
+      </script>
+      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+    {% endif %}
+  </div>
+</div>

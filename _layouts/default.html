@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!-- define language to be used -->
+<html lang="en">
+
+<head>
+    {% include paths.html %}
+    <!-- sets page encoding -->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
+    <title>FGC Blog</title>
+    <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="{{ site.baseurl }}/assets/css/main.css" media="screen,projection" />
+
+    <!-- import font icons-->
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/font-awesome/css/font-awesome.min.css">
+
+
+
+    <!--<link rel="stylesheet" href="http://basehold.it/11/000000">-->
+
+</head>
+
+<body>
+    <header>
+      {% include nav.html %}
+    </header>
+    <div class="content container">
+        {{content}}
+    </div>
+
+
+   {% include footer.html %}
+
+    <script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
+    <script src="{{ site.baseurl }}/assets/materialize-src/js/bin/materialize.js"></script>
+    <script src="{{ site.baseurl }}/assets/js/init.js"></script>
+</body>

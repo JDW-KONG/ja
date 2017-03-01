@@ -385,3 +385,6 @@ article .card .card-content p {
   }
 }
 
+.catbloc:not(:target) {
+    display: none;
+}

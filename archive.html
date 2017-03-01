@@ -1,0 +1,61 @@
+--- 
+layout: default 
+title: archives 
+---
+
+<nav>
+    <a href="#allposts">All posts</a> {% for category in site.categories %}
+    <a href="#{{ category | first | remove:' ' }}"><strong>{{ category | first }}</strong></a> {% if forloop.last %}.{% else
+    %}, {% endif %} {% endfor %}
+</nav>
+
+<div class="catbloc" id="allposts">
+    <h2>All posts</h2>
+    <div class="row">
+        <ul>
+            {% for post in site.posts %}
+            <li>
+
+                <section class="col l2 m6 s12 post-preview">
+                    <div class="card z-depth-2">
+                        <div class="card-image">
+                            <a href="{{ site.baseurl }}/{{ post.url }}" class="scale">
+                                <div class="img img-scale">
+                                    <img src="{{ post.img }}" alt="infinite" class="z-depth-2">
+                                </div>
+                            </a>
+                            <span class="card-title tag">video</span>
+                        </div>
+                        <div class="card-content">
+                            <span class="feat-date">{{ post.date | date: "%d %B %Y" }}</span>
+                            <a href="#">
+                                <a href="{{ site.baseurl }}/{{ post.url }}">
+                                    <h5>{{ post.title }}</h5>
+                                </a>
+                            </a>
+                        </div>
+                        <a class="cont" href="{{ site.baseurl }}/{{ post.url }}"><span>Continue</span><i class="fa fa-chevron-right"></i></a>
+                    </div>
+                </section>
+
+
+            </li>
+
+
+            {% endfor %}
+        </ul>
+    </div>
+
+</div>
+
+<ul style="list-style-position: inside">
+    <div class="row latest">
+        {% for post in site.posts %}
+        <li>
+
+
+
+        </li>
+        {% endfor %}
+    </div>
+</ul>

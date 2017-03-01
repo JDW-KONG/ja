@@ -7,7 +7,7 @@ comments: true
   <div class="col l8 offset-l2 m12">
     <div class="title">
       <h3>{{page.title}}</h3>
-      <span class="post-info">Posted by <a href="#">Justice</a> - 2 hours ago</span>
+      <span class="post-info">Posted by <a href="#">Justice</a> - {{ page.date | date: "%d %B %Y" }}</span>
       <hr>
     </div>
 

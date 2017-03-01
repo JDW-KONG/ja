@@ -224,3 +224,11 @@ nav {
     height: $navbar-height;
   }
 }
+
+nav .brand-logo:hover {
+  transition: all .25s;
+}
+
+nav .brand-logo:hover {
+  color: #b71c1c;
+}

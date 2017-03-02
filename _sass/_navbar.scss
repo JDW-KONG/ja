@@ -232,3 +232,10 @@ nav .brand-logo:hover {
 nav .brand-logo:hover {
   color: #b71c1c;
 }
+
+.content nav {
+  background: none;
+  a {
+      color: #000;
+  }
+}

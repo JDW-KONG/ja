@@ -388,3 +388,8 @@ article .card .card-content p {
 .catbloc:not(:target) {
     display: none;
 }
+
+.latest .card,
+.archive .card {
+  display: inline-block;
+}

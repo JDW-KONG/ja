@@ -73,11 +73,30 @@
 
 // Form prefix
 .prefix ~ .chips {
-  margin-left: 3rem;
   width: 92%;
   width: calc(100% - 3rem);
 }
 .chips:empty ~ label  {
   font-size: 0.8rem;
   transform: translateY(-140%);
+}
+
+.tags {
+  margin-top: 44px;
+}
+
+.tags .chip {
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transition: all .25s;
+  color: #b71c1c;
+
+  strong {
+    font-weight: 800;
+  }
+
+  &:hover {
+    background: #b71c1c;
+    color: #fff;
+  }
 }

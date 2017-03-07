@@ -5,13 +5,26 @@ title: archives
 
 
 <div class="tags">
-    <a href="#allposts">All posts</a> {% for category in site.categories %}
-    <a href="#{{ category | first | remove:' ' }}"><strong>{{ category | first }}</strong></a> {% if forloop.last %}.{% else
-    %}, {% endif %} {% endfor %}
+    <a href="#allposts">
+        <div class="chip">
+            <strong>All posts</strong>
+        </div>
+    </a> 
+    
+    
+    
+    {% for category in site.categories %}
+         <a href="#{{ category | first | remove:' ' }}">
+            <div class="chip">
+                <strong>{{ category | first }}</strong>
+            </div>
+        </a>
+    {% endfor %}
+
 </div>
 
 <div class="catbloc archive" id="allposts">
-    <h2>All posts</h2>
+    <h3>All posts</h3>
     <div class="row">
         <ul>
             {% for post in site.posts %}
@@ -51,7 +64,7 @@ title: archives
 
 {% for category in site.categories %}
 <div class="catbloc archive" id="{{ category | first | remove:' ' }}">
-    <h2>{{ category | first }}</h2>
+    <h3>{{ category | first }}</h3>
 
     <div class="row">
         <ul>

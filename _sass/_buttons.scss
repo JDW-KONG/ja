@@ -291,3 +291,18 @@ button.btn-floating {
 .btn-block {
   display: block;
 }
+
+// social icons
+.social-icons {
+  text-align: center;
+  font-size: 2em;
+  a {
+    color: #fff;
+    &:hover {
+      color: #b71c1c;
+    }
+  }
+  i {
+    padding: 0 .25em;
+  }
+}
